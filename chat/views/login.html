@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include partials/head.html %>
+</head>
+<body>
+  <% include partials/nav.html %>
+  <div class="container page-content">
+    <h1 class="center-align"><%=title %></h1>
+    <div class="row">
+      <div class="col l6 offset-l3 m6 offset-m3 s10 offset-s1">
+        <form action="loginForm" method="post">
+          <div class="row">
+            <div class="input-field l12 m12 s12">
+              <i class="material-icons prefix">perm_identity</i>
+              <input id="username" type="text" name="username" class="validate" required="" />
+              <label for="username">Username</label>
+            </div>
+            <div class="input-field l12 m12 s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="pwd" type="password" name="password" class="validate" required="" />
+              <label for="pwd">Password</label>
+            </div>
+          </div>
+          <div class="col l12 m12 s12 center-align">
+            <button type="submit" class="btn waves-effect waves-light">Sign in<i class="material-icons right">send</i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="error" class="hide"><%=err %></div>
+  <% include partials/foot.html %>
+  <script type="text/javascript" src="js/sign.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include partials/head.html %>
+</head>
+<body>
+  <nav class="cyan darken-2">
+    <div class="nav-wrapper container">
+      <a href="/login" class="brand-logo">Node</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+      <ul id="mobile-demo" class="side-nav">
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container page-content">
+    <h1 class=""><%=title %></h1>
+    <div class="grey-text">October 25th,2016</div>
+    <div class="row">
+      <div class="col l6 m8 offset-m2 s12">
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="/img/1.jpg" alt="Chat Room">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content left-align">
+              <span class="activator"><i class="material-icons grey-text right">visibility</i></span>
+              <h5>Chat Room</h5>
+              <div class="chip">
+                <img src="/img/online.jpg" alt="admin">
+                <span id="admin"><%=admin.username %></span>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="/chat">Start a Chat</a>
+            </div>
+          </div>
+          <div class="card-reveal left-align">
+            <span class="card-title grey-text text-darken-4">Chat Room<i class="material-icons right">close</i></span>
+            <p>A environment for online communication, all members who login successfully are here, start a chat now and wish you have a good day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% include partials/foot.html %>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include partials/head.html %>
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+  <nav class="cyan darken-2">
+    <div class="nav-wrapper container">
+      <div class="brand-logo">Hi~<span id="admin"><%=admin.username %></span></div>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="back" href="/index">Back</a></li>
+      </ul>
+      <ul id="mobile-demo" class="side-nav">
+        <li><a class="back" href="/index">back</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container page-content">
+    <div class="row">
+      <div class="col l9">
+        <div id="chat" >
+          <div class="col s11">
+            <h1 class="chat-title">#chat room</h1>
+            <p class="grey-text">
+              <span class="chat-purpose">Purpose: </span>
+              A environment for online communication, all members who login successfully are here, start a chat now and wish you have a good day.
+            </p>
+          </div>
+          <div id="chat-body">
+            <!-- <div class="col s11">
+              <div class="card-panel">
+                <span class="grey-text">枫上雾棋：</span>
+                <span class="chat-content">
+
+                <span class="grey-text right">13:00</span>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <form id="chatForm" action="chatForm" method="post" class="col s11">
+          <textarea id="textarea" rows="1" placeholder="Type Here" autofocus="" required=""></textarea>
+        </form>
+      </div>
+      <div class="col l3 hide-on-med-and-down">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header active">
+              <i class="material-icons amber-text">whatshot</i>Members
+              （<span id="onlineNum">1</span>/<%=users.length %>）
+            </div>
+            <div class="collapsible-body">
+              <ul id="users" class="collection">
+                <!-- <%
+                  for(var i = 0; i < users.length; i++){
+                    %><li class='collection-item'><%=users[i].username%></li><%
+                  }
+                %> -->
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <% include partials/foot.html %>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="js/socket.js"></script>
+  <script type="text/javascript" src="js/textarea.js"></script>
+  <script type="text/javascript" src="js/chat.js"></script>
+</body>
+</html>

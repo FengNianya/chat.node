@@ -1,0 +1,49 @@
+
+.page-content {
+  margin-top: 1rem;
+}
+
+#chat, #users {
+  overflow-y: scroll;
+}
+
+.chat-title {
+  display: inline;
+  color: #555459;
+}
+
+.chat-purpose {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.card-panel {
+  margin: 0.5rem 0;
+  padding: 10px 20px;
+}
+
+.chat-content {
+  line-height: 1.5em;
+  color: #555;
+}
+
+textarea {
+  margin-top: 1rem;
+  padding: 10px 10px 14px;
+  line-height: 20px;
+  max-height: 10em;
+  font-size: 14px;
+  color: #555;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  outline: 0;
+  overflow: hidden;
+}
+
+textarea:focus {
+  border: 2px solid #bbbdbf;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
