@@ -1,4 +1,4 @@
 
-> # learnNode
+> # chat-node
 
 * chat
