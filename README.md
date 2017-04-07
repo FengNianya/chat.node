@@ -1,4 +1,2 @@
 
 > # chat-node
-
-* chat
